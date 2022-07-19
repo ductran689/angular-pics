@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/styles/variables.scss";
+
+/* Global css */
+
+a,
+p {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+/* facebook-btn */
+.login-fb {
+  button {
+    background-color: $bg-logform;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    img {
+      width: 20px;
+      margin-right: 8px;
+    }
+    p {
+      color: $text-dark;
+    }
+  }
+}
+/* margin-bottom 20px */
+.magbot20 {
+  margin-bottom: 20px;
+}
+/* margin-top 20px */
+.magtop20 {
+  margin-top: 20px;
+}
+/* inputfield */
+.input-field {
+  width: calc(100% - 12px);
+  height: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: solid 1px black;
+}
+/* signup-login btn */
+.log-sign-btn {
+  border-radius: 5px;
+  border: solid 1px black;
+  padding: 5px;
+  background: #000;
+  color: white;
+  cursor: pointer;
+  height: 35px;
+  &:disabled {
+    background-color: darkgrey;
+    cursor: auto;
+  }
+}
