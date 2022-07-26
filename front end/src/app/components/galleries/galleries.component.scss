@@ -1,0 +1,9 @@
+.gallery{
+&__container{
+  height: 500px;
+  img{
+    width: 100%;
+    object-fit: contain;
+  }
+}
+}

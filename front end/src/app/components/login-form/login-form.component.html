@@ -1,0 +1,41 @@
+<section class="login-form">
+  <div class="form-container">
+    <div class="login-fb magbot20 ">
+      <button href="" class="login-fb-btn">
+        <img src="../../../assets/images/facebook.svg" alt="">
+        <p>Log in with Facebook</p>
+      </button>
+    </div>
+    <p>OR</p>
+    <form class="login" [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+      <div class="email form-field">
+        <p for="email"> Email</p>
+        <input type="text" name="email" id="" class="input-field" formControlName="email">
+        <!--         <small *ngIf="email.invalid && email.touched "></small>
+ -->
+      </div>
+      <div class="password form-field">
+        <div class="label-password">
+          <p for="password"> Password</p>
+          <a href="">
+            <p class="forgotpwd">Forgot your password?</p>
+          </a>
+        </div>
+        <input type="text" name="password" id="" class="input-field" formControlName="password">
+        <!--         <small *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched "></small>
+ -->
+      </div>
+    </form>
+    <button class="login-btn log-sign-btn" type="submit" [disabled]="!loginForm.valid" (click)="onSubmit()">
+      Login
+    </button>
+    <div class="x-btn">
+      <a [routerLink]="['/']">
+        <img src="../../../assets/images/X-close.svg" alt="">
+      </a>
+    </div>
+    <div class="wt-signup">
+      <p>Don't have an account? <a [routerLink]="['/signup']"> Join Us</a></p>
+    </div>
+  </div>
+</section>
