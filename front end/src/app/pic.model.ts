@@ -1,3 +1,4 @@
 export class Pic{
-  url: string =""
+
+  src:string=''
 }

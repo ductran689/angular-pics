@@ -14,8 +14,9 @@ export class AuthService {
   login(value:any){
     signInWithEmailAndPassword(this.auth,value.email,value.password)
     .then(()=>{
-      localStorage.setItem('token',JSON.stringify(value))
-      this.router.navigate(['/galleries'])
+      localStorage.setItem('token', JSON.stringify(value))
+      const token = localStorage.getItem('token')
+      if (token) this.router.navigate(['/pictures'])
     }, err =>{
       alert(err.message)
       this.router.navigate(['/login'])
@@ -25,8 +26,8 @@ export class AuthService {
   signup(value:any){
     createUserWithEmailAndPassword(this.auth,value.email,value.password)
     .then((res)=>{
-      console.log(res)
       this.router.navigate(['login'])
+      alert('successfull')
     }, err =>{
       alert(err.massage)
       this.router.navigate(['signup'])

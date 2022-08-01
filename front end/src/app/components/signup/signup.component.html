@@ -12,7 +12,7 @@
       </button>
     </div>
     <p class="or magbot20 ">OR</p>
-    <form class="signup-form" (ngSubmit)="signUp()">
+    <form class="signup-form" (ngSubmit)="signUp()" [formGroup]="signupForm">
       <div class="name">
         <!-- <div class="first-name ">
           <p>First Name</p>
@@ -25,13 +25,13 @@
       </div>
       <div class="email form-field">
         <p for="email"> Email</p>
-        <input type="text" name="email" id="" class="input-field">
+        <input type="text" name="email" id="" class="input-field" formControlName="email">
       </div>
       <div class="password form-field">
         <div class="label-password">
           <p for="password"> Password</p>
         </div>
-        <input type="text" name="password" id="" class="input-field">
+        <input type="text" name="password" id="" class="input-field" formControlName="password">
       </div>
     </form>
     <button class="signup-btn log-sign-btn magtop20" (click)="signUp()">
