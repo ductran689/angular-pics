@@ -1,37 +1,63 @@
 <section class="signup">
   <div class="signup-img">
-    <img src="../../../assets/images/bg.jpg" alt="">
+    <img src="../../../assets/images/bg.jpg" alt="" />
   </div>
   <div class="signup-container">
     <h1>Join Us</h1>
-    <p class="signup-quote ">Already have an account? <a [routerLink]="['/login']">Login</a></p>
+    <p class="signup-quote">
+      Already have an account? <a [routerLink]="['/login']">Login</a>
+    </p>
     <div class="login-fb magbot20">
       <button href="" class="login-fb__btn">
-        <img src="../../../assets/images/facebook.svg" alt="">
+        <img src="../../../assets/images/facebook.svg" alt="" />
         <p>Log in with Facebook</p>
       </button>
     </div>
-    <p class="or magbot20 ">OR</p>
+    <p class="or magbot20">OR</p>
     <form class="signup-form" (ngSubmit)="signUp()" [formGroup]="signupForm">
       <div class="name">
-        <!-- <div class="first-name ">
+        <div class="first-name">
           <p>First Name</p>
-          <input type="text" name="firstname" id="" class="input-field name-input">
+          <input
+            type="text"
+            name="firstname"
+            id=""
+            class="input-field name-input"
+            formControlName="firstname"
+          />
         </div>
         <div class="last-name">
           <p>Last Name</p>
-          <input type="text" name="lastname" id="" class="input-field name-input">
-        </div> -->
+          <input
+            type="text"
+            name="lastname"
+            id=""
+            class="input-field name-input"
+            formControlName="lastname"
+          />
+        </div>
       </div>
       <div class="email form-field">
-        <p for="email"> Email</p>
-        <input type="text" name="email" id="" class="input-field" formControlName="email">
+        <p for="email">Email</p>
+        <input
+          type="text"
+          name="email"
+          id=""
+          class="input-field"
+          formControlName="email"
+        />
       </div>
       <div class="password form-field">
         <div class="label-password">
-          <p for="password"> Password</p>
+          <p for="password">Password</p>
         </div>
-        <input type="text" name="password" id="" class="input-field" formControlName="password">
+        <input
+          type="text"
+          name="password"
+          id=""
+          class="input-field"
+          formControlName="password"
+        />
       </div>
     </form>
     <button class="signup-btn log-sign-btn magtop20" (click)="signUp()">

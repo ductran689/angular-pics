@@ -1,37 +1,22 @@
-<app-navbar></app-navbar>
-<section class="categories">
-  <a [routerLink]="['/galleries']" (click)="natClick()">
-    nature
-  </a>
-  <a [routerLink]="['/galleries']" (click)="compClick()">
-    computer
-  </a>
-  <a [routerLink]="['/galleries']" (click)="beachClick()">
-    beach
-  </a>
-  <a [routerLink]="['/galleries'] " (click)="churchClick()">
-    church
-  </a>
-  <a [routerLink]="['/galleries']" (click)="animalClick()">
-    animal
-  </a>
-
-</section>
 <section class="firstsight">
   <div class="main-text">
     <h3>Yours Favourite Pictures</h3>
     <p>Choose your favourite pictures from our sources</p>
     <div class="main-search" [formGroup]="searchForm">
-
-      <input type="text" name="" id=""
-      placeholder="search your photos here"
-      formControlName ="search"
-
-      >
-      <a href=""><img src="../../../assets/images/search-black.svg" alt=""></a>
+      <input
+        type="text"
+        name=""
+        id=""
+        placeholder="search your photos here"
+        formControlName="search"
+      />
+      <a href=""
+        ><img src="../../../assets/images/search-black.svg" alt=""
+      /></a>
     </div>
   </div>
-  <img src="../../../assets/images/photo-1656414896156-bb1339254229.jpg" alt="">
-
-
+  <img
+    src="../../../assets/images/photo-1656414896156-bb1339254229.jpg"
+    alt=""
+  />
 </section>

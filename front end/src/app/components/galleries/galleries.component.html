@@ -1,19 +1,11 @@
 <!-- diplay images here -->
 <section class="gallery">
-  <div class="gallery__container" >
-    <div class="back-btn">
-      <a  [routerLink]="['/']">
-        Back
-      </a>
-    </div>
-    <div class="display" >
+  <div class="gallery__container">
+    <div class="display">
       <div class="photo" *ngFor="let photo of images">
-        <img [src]="photo" alt="">
+        <img [src]="photo" alt="" />
       </div>
-
-
     </div>
-
   </div>
-
+  <button (click)="toggleFlag()">toggle flag</button>
 </section>

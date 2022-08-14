@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { ShareService } from 'src/app/services/share/share.service';
 
 @Component({
   selector: 'app-login-form',
@@ -19,6 +20,6 @@ export class LoginFormComponent implements OnInit {
   });
   ngOnInit(): void {}
   onSubmit(): any {
-    this.authservice.login(this.loginForm.value)
+    this.authservice.login(this.loginForm.value);
   }
 }
